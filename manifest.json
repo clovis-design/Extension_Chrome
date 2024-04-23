@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Overall Average Pronote",
+  "description":"Cette extension Chrome peut calculer votre moyenne générale grâce a la commande suivante Ctrl+Shift+H.",
+  "version": "0.25",
+  "action": {
+    "default_popup": "Extension.html",
+    "default_icon": {
+      "16": "images/icon_16.png", 
+      "32": "images/icon_32.png",   
+      "128": "images/icon_128.png"   
+    }
+  },
+"background":{
+  "service_worker": "background.js",
+  "type": "module"
+},
+
+  "permissions": [
+    "activeTab",
+    "scripting"
+   ],
+   "commands": {
+    "my-command-1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Ouvre l'enxtension"
+    },
+    "my-command-2": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Calcul la moyenne générale"
+    }
+  },
+
+  "icons": {
+    "16": "images/icon_16.png", 
+    "32": "images/icon_32.png",   
+    "128": "images/icon_128.png"    
+  }
+}
+
